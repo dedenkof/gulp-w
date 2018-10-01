@@ -7,7 +7,7 @@ global.$ = {
 // реквайрим модуль sass.js
 // Делаем вызов (регистрируем таск), чтобы иметь к нему доступ
 require('./gulp/tasks/sass.js')();
-
+require('./gulp/tasks/pug.js')();
 $.gulp.task('sass');
-
+$.gulp.task('pug');
 // Test
