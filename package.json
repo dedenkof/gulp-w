@@ -1,7 +1,6 @@
 {
   "name": "gulp-work",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +9,20 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-csso": "^3.0.1"
-  }
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dedenkof/gulp-w.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dedenkof/gulp-w/issues"
+  },
+  "homepage": "https://github.com/dedenkof/gulp-w#readme",
+  "description": ""
 }
