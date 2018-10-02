@@ -13,3 +13,8 @@ global.$ = {
 $.path.task.forEach(function(taskPath) {
     require (taskPath) ();
 });
+
+// Test note pc
+//git config --global user.email "dedenkof@ukr.net"
+//git config --global user.name "Volodymyr Dedenko"
+//git config core.autocrlf true
