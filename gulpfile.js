@@ -7,7 +7,7 @@ global.$ = {
     },
     gulp: require('gulp'),
     // чтобы иметь доступ к плагину del из разных  мест запихиваем его в global
-    gulp: require('del'),
+    del: require('del'),
     gp: require('gulp-load-plugins')()
 };
 
