@@ -3,7 +3,7 @@
 module.exports = function() {
     $.gulp.task('pug', function () {
         // Взяли все файлы pug
-        return $.gulp.src('./source/template/*.pug')
+        return $.gulp.src('./source/template/*/*.pug')
             // Применили к исходникам pug
             // pretty: true - компиляция html не в одну строку
             .pipe($.gp.pug({pretty: true}))
