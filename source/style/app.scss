@@ -1,27 +1,191 @@
-.greating {
-  overflow: hidden;
-  position: relative;
-  padding: 150px 20px 50px;
-  background: #F44336;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+@import '_reset';
 
-  &_text {
-    font: 45px 'Arial', sans-serif;
-    color: #fff;
-  }
+$font-stack:  Arial, Helvetica, sans-serif;
+$background-color: #333;
+$primary-color: #fc0;
+$text-color: #292929;
+$text-color-light: #fff;
+$text-head-color: #000;
+$link-color: dodgerblue;
+$link-color-hover: #54cdff;
+$padding-height: 20px;
+$padding-width: 20px;
+$spacing: 30px;
 
-  &_picture {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100px;
-    height: 114px;
-    background: url('/assets/img/viking.png') no-repeat center;
-    transform: translate3D(100%, 0, 0);
-    transition: transform 0.5s;
-  }
+body {
+  font: 100% $font-stack;
+  color: $text-color;
+
 }
 
-.greating_picture.m--show {
-  transform: translate3D(0, 0, 0);
+
+h1{
+  color: $text-head-color;
+  text-align: center;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #607D8B;
+  height: 80px;
+  border-bottom: 1px solid #eee;
+  z-index: 9999;
+}
+
+.logo{
+  margin: 0;
+  padding: 20px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+i{
+  height: 24px;
+  color: #fff;
+  position: absolute;
+  right: 16px;
+  top: 26px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  background: #fff;
+  display: none;
+}
+
+li {
+}
+
+li a {
+  display: block;
+  color: $link-color;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+  border-bottom: 1px solid #eee;
+}
+
+li a:hover {
+  background-color: $link-color-hover;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.container{
+  width: 1270px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+
+footer{
+  width: 100%;
+  background: #124e85;
+  padding: $padding-height;
+  text-align: center;
+  color: $text-color-light;
+}
+
+.box {
+  @include border-radius(20px);
+  background-color: $primary-color;
+  padding: $padding-height $padding-width;
+  margin: $spacing auto;
+  min-height: 200px;
+  width: 100%;
+}
+
+// Данный отрывок кода не попадет в CSS, так как %equal-heights никогда не расширялся.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Данный отрывок кода попадет в CSS потому, что %message-shared расширен.
+%message-shared {
+  border: 1px solid #25a2cc;
+  padding: $padding-height $padding-width;
+  color: #333;
+  width: 100%;
+}
+
+.message {
+  @extend %message-shared;
+  background: #124e85;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+  background: #028530;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+  background: #ff6058;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+  background: #ffd907;
+}
+
+.first-section{
+  padding: $padding-height $padding-width;
+  background: background-color;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
 }
